@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.absolute {
+     position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centered {
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.centered-bottom {
+     top: 80%;
+     left: 47%;
+     transform: translate(-50%, -50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cursor {
+     color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.texture-selector {
+     transform: scale(5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.texture-selector img.active {
+     border: 1px solid grey;
+}
+
+.menu {
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+     font-family: "Minecraftia";
+}
+
+.button {
+     width: 300px;
+     height: 50px;
+     cursor: pointer;
+     background-color: rgb(113, 107, 107);
+	border: 2px solid #000;
+     color: white;
+     font-size: 28px;
+     display: none;
+}
+
+.button:hover {
+     background-color: rgba(100, 100, 255, .45);
+		text-shadow: 2px 2px #202013CC;
+		color: #FFFFA0;
+}
+
+.button.active {
+     display: block;
 }
